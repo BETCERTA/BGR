@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batata Gourmet Recheada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #a9896b;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #C28061;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .container {
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    h2 {
+      border-bottom: 2px solid #d62828;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      color: #d62828;
+      font-size: 20px;
+    }
+    .section {
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      background: #f1f1f1;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    label:hover {
+      background-color: #e6e6e6;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      margin-left: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    #subtotal {
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 20px;
+      color: #444;
+    }
+    .whatsapp-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #25d366;
+      color: white;
+      text-align: center;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: background-color 0.2s;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebe5b;
+    }
+    #nome-cliente {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .ingredientes {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>Batata Gourmet Recheada</header>
+  <div class="container">
+    <input type="text" id="nome-cliente" placeholder="Digite seu nome">
+
+    <div class="section">
+      <h2>Pizzas</h2>
+      <label>
+        <input type="checkbox" value="45" data-name="Pizza Calabresa - R$45,00">
+        Pizza Calabresa - R$45,00
+        <span class="ingredientes">Ingredientes: Molho, mussarela, calabresa, cebola, azeitona, manjericão, azeite e orégano.</span><img src="imagens/imagem70.png" alt="Pizza Calabresaa" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+      </label>
+      <label>
+        <input type="checkbox" value="45" data-name="Pizza Napolitana - R$45,00">
+        Pizza Napolitana - R$45,00
+        <span class="ingredientes">Ingredientes: Molho, mussarela, presunto, tomate, pimentão, manjericão,azeite e oregano.</span><img src="imagens/imagem2.png" alt="Pizza Napolitana" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+      </label>
+      <label>
+        <input type="checkbox" value="45" data-name="Pizza Portuguesa - R$45,00">
+        Pizza Portuguesa - R$45,00
+        <span class="ingredientes">Ingredientes: Molho, mussarela, presunto, tomate, cebola, pimentão, ovo, azeitona, azeite e orégano.</span><img src="imagens/imagem4.png" alt="Pizza Portuguesa" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+      </label>
+      <label>
+        <input type="checkbox" value="45" data-name="Pizza Mussarela - R$45,00">
+        Pizza Mussarela - R$45,00
+        <span class="ingredientes">Ingredientes: Molho, mussarela, manjericão, azeite e orégano.</span><img src="imagens/imagem3.png" alt="Pizza Mussarela" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+      </label>
+      <label>
+        <input type="checkbox" value="45" data-name="Pizza de Frango - R$45,00">
+        Pizza de Frango - R$45,00
+        <span class="ingredientes">Ingredientes: Molho, mussarela, frango, azeitona, azeite e orégano.</span><img src="imagens/imagem5.png" alt="Pizza Frango" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+      </label>
+      </div>
+
+      <div class="section">
+      <h2>Adicionais</h2>
+      <label>
+        <input type="checkbox" value="3" data-name="Borda Lateral - R$3,00">
+        Borda Lateral - R$3,00
+        <span class="ingredientes">Opção: cheddar ou Requeijão.</span><img src="imagens/imagem18.png" alt="Borda Lateral" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+      </label>
+      <label>
+        <input type="checkbox" value="5" data-name="Borda Pãozinho - R$5,00">
+        Borda Pãozinho - R$5,00
+        <span class="ingredientes">Opção: cheddar ou Requeijão.</span><img src="imagens/imagem17.png" alt="Borda Pãozinho" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+      </label>
+      <label>
+        <input type="checkbox" value="6" data-name="Borda Vulcão - R$6,00">
+        Borda Vulcão - R$6,00
+        <span class="ingredientes">Opção: cheddar ou Requeijão.</span><img src="imagens/imagem16.png" alt="Borda Vulcão" class="pizza-img">
+        <input type="number" min="1" value="1" class="quantidade">      
+    </label>
+    </div>
+
+    <div class="section">
+      <h2>Bebidas Lata 350ml</h2>
+      <label>
+        <input type="checkbox" value="10" data-name="Coca Cola 1L - R$10,00">
+        Coca Cola - R$10,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem20.png" alt="Coca Cola 1L" class="pizza-img">      
+      </label>
+      <label>
+        <input type="checkbox" value="10" data-name="Jesus 1L - R$10,00">
+        Jesus - R$10,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem24.png" alt="Jesus 1L" class="pizza-img">      
+      </label>
+      <label>
+        <input type="checkbox" value="10" data-name="Guaraná 1L - R$10,00">
+        Guaraná - R$10,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem22.png" alt="Guaraná 1L" class="pizza-img">      
+    </label>
+    </div>
+    
+    <div class="section">
+      <h2>Bebidas 2L</h2>
+      <label>
+        <input type="checkbox" value="15" data-name="Coca Cola 2L - R$15,00">
+        Coca Cola - R$15,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;<img src="imagens/imagem19.png" alt="Coca Cola 2L" class="pizza-img">      
+      </label>
+      <label>
+        <input type="checkbox" value="15" data-name="Jesus 2L - R$15,00">
+        Jesus - R$15,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem23.png" alt="Jesus 2L" class="pizza-img">      
+      </label>
+      <label>
+        <input type="checkbox" value="15" data-name="Guaraná 2L - R$15,00">
+        Guaraná - R$15,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem21.png" alt="Guaraná 2L" class="pizza-img">      
+    </label>
+    </div>
+
+    <div class="section">
+      <h2>Bebidas 1L</h2>
+      <label>
+        <input type="checkbox" value="10" data-name="Coca Cola 1L - R$10,00">
+        Coca Cola - R$10,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem20.png" alt="Coca Cola 1L" class="pizza-img">      
+      </label>
+      <label>
+        <input type="checkbox" value="10" data-name="Jesus 1L - R$10,00">
+        Jesus - R$10,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem24.png" alt="Jesus 1L" class="pizza-img">      
+      </label>
+      <label>
+        <input type="checkbox" value="10" data-name="Guaraná 1L - R$10,00">
+        Guaraná - R$10,00
+        <input type="number" min="1" value="1" class="quantidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagens/imagem22.png" alt="Guaraná 1L" class="pizza-img">      
+    </label>
+    </div>
+
+    <div id="subtotal">Subtotal: R$0,00</div>
+    <a href="#" id="whatsapp-link" class="whatsapp-btn">Enviar pedido pelo WhatsApp</a>
+  </div>
+
+    <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const quantidadeInputs = document.querySelectorAll('.quantidade');
+    const nomeClienteInput = document.getElementById('nome-cliente');
+    const subtotalEl = document.getElementById('subtotal');
+    const whatsappLink = document.getElementById('whatsapp-link');
+
+    function atualizarPedido() {
+      let subtotal = 0;
+      let pedidoTexto = 'Pedido de *' + nomeClienteInput.value + '*\n\n'; // Nome do cliente em negrito
+
+      checkboxes.forEach((checkbox, index) => {
+        if (checkbox.checked) {
+          const quantidade = parseInt(quantidadeInputs[index].value);
+          const valor = parseFloat(checkbox.value);
+          subtotal += valor * quantidade;
+          pedidoTexto += `${checkbox.dataset.name} x${quantidade} - R$${(valor * quantidade).toFixed(2)}\n`;
+        }
+      });
+
+      subtotalEl.textContent = `Subtotal: R$${subtotal.toFixed(2)}`;
+      pedidoTexto += `\nSubtotal: *R$${subtotal.toFixed(2)}*`; // Subtotal em negrito
+      whatsappLink.href = `https://wa.me/98986029057?text=${encodeURIComponent(pedidoTexto)}`;
+    }
+
+    checkboxes.forEach(checkbox => checkbox.addEventListener('change', atualizarPedido));
+    quantidadeInputs.forEach(input => input.addEventListener('input', atualizarPedido));
+  </script>
+</body>
+</html>
