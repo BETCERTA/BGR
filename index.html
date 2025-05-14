@@ -206,7 +206,11 @@
       <h2>Obrigado pela visita. Nossa maior motivação é a sua satisfação. Volte sempre!</h2>
 
       <div class="section">
-      <h2>PIX: hericksantos465@gmail.com</h2>
+      <h2>PIX:</h2>
+   <input type="text" id="chave-pix" value="hericksantos465@gmail.com" readonly style="width: 100%; padding: 10px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 10px;">
+   <button onclick="copiarPix()" style="width: 100%; padding: 12px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer;">Copiar chave PIX</button>
+   <p id="mensagem-copiado" style="color: green; font-weight: bold; display: none; margin-top: 10px;">Chave PIX copiada!</p>
+
     
     <div id="subtotal">Subtotal: R$0,00</div>
     <a href="#" id="whatsapp-link" class="whatsapp-btn">Enviar pedido pelo WhatsApp</a>
@@ -239,6 +243,21 @@
 
     checkboxes.forEach(checkbox => checkbox.addEventListener('change', atualizarPedido));
     quantidadeInputs.forEach(input => input.addEventListener('input', atualizarPedido));
+  
+function copiarPix() {
+  const chavePix = document.getElementById('chave-pix');
+  chavePix.select();
+  chavePix.setSelectionRange(0, 99999); // Para dispositivos móveis
+  document.execCommand('copy');
+
+  const mensagem = document.getElementById('mensagem-copiado');
+  mensagem.style.display = 'block';
+  setTimeout(() => {
+    mensagem.style.display = 'none';
+  }, 2000);
+}
+
+  
   </script>
 </body>
 </html>
